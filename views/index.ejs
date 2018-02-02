@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <title><%= title %></title>
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+	<script src="/javascripts/main.js"></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+	
+	<div ng-controller="mainController">
+		<form class="form-horizontal" ng-submit="submit()" name="MainForm">
+			<div class="form-container">
+				<div class="form-group" ng-class="{'has-error': MainForm.name.$invalid && MainForm.name.$dirty}">
+					<label for="name">Name</label>
+					<input class="form-control" type="text" name="name" ng-model="name" required />
+					<span ng-show="MainForm.name.$invalid && !MainForm.name.$pristine" class="text-danger">Enter name</span>
+				</div>
+
+				<div class="form-group" ng-class="{'has-error': MainForm.email.$invalid && MainForm.email.$dirty}">
+					<label for="email">Email</label>
+					<input class="form-control" type="email" name="email" ng-model="email" required />
+					<span ng-show="MainForm.email.$invalid && !MainForm.email.$pristine" class="text-danger">Enter a valid email</span>
+				</div>
+
+				<div class="form-group" ng-class="{'has-error': MainForm.number.$invalid && MainForm.number.$dirty}">
+					<label for="number">Number</label>
+					<input class="form-control" type="number" maxlength="10" name="number" ng-model="number" required />
+					<span ng-show="MainForm.number.$invalid && !MainForm.number.$pristine" class="text-danger">Enter a ten-digit valid phone number</span>
+				</div>
+
+				<div class="form-group">
+					<input class="btn btn-primary" type="submit" value="Submit data" />
+				</div>
+				
+				<div ng-if="loading === true">
+					Adding record..
+				</div>
+			</div>		
+		</form>
+		
+		<div ng-if="flashtext !== ''" class="alert" ng-class="{ 'alert-success': success, 'alert-danger': !success }">
+				<p>{{ flashtext }}</p>
+		</div>
+	</div>
+	
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+    "mongo": {
+        "dbURI": "mongodb://jroratorio:123456@ds119988.mlab.com:19988/mordor-demo"
+    },
+    "prosperworks": {
+        "apiKey": "185e110ef1c5ea7e9236c3ba2b90dc2a",
+        "application": "developer_api",
+        "userEmail": "jroratorio@gmail.com"
+    },
+    "gmail": {
+        "clientId": "731644413444-t433kskoe1hcmgtkhlj73b4hck436igc.apps.googleusercontent.com",
+        "clientSecret": "Qw4Eywu5RigAZH3X5sF30AOg",
+        "refreshToken": "1/LOE9gCWYBEe3fNnCn8TuIjrjbxszWPpGhqVY6h6qGRU",
+        "accessToken": "ya29.GltVBe5MzZWboRwfXjnn58mETSr3Irc021lJ4GsRVe8TH8vZphZPA4q7Jd-eM2f4qVEPcvfImmIEOSNTAgLbhkeGc6gnt5_q_X5uHKtcUjcC9imxMdyIDucye9GH"        
+    }
+}
