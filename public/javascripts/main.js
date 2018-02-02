@@ -27,7 +27,8 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http){
                 })
                 .catch(function(data, status){
                     // failure response
-                    $scope.success = false;
+                    $scope.success = false
+                    $scope.loading = false;
                     $scope.flashtext = data.data;
                 });
     };
