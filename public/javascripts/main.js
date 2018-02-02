@@ -22,13 +22,13 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http){
                     // success response
                     $scope.success = true;
                     $scope.loading = false;
-                    $scope.flashtext = "Record has been added";                   
+                    $scope.flashtext = data.data;                   
                                         
                 })
                 .catch(function(data, status){
                     // failure response
                     $scope.success = false;
-                    $scope.flashtext = "Record could not be added";
+                    $scope.flashtext = data.data;
                 });
     };
 }]);
